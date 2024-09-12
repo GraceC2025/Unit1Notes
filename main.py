@@ -27,16 +27,33 @@ def main():
     print(type(name))
 
     # math in f-strings
-    print(f"My age in 10 years: {age + 10}")
+    print(f"My age in 10 years: {age + 10}", end="\n \n")
 
-def bake_Cookie(ingredients, temperature, instructions):
+    # initialize args for function
+    ingredients_List = ["chocolate chips", "cinnamon", "flour", "sugar", "butter", "eggs"]
+    baking_Instructions = "Mix everything together and put into oven"
+    oven_Temp = 325 
+
+    # call a function
+    bake_Cookie(ingredients_List, baking_Instructions, oven_Temp)
+
+    #call function with optional args
+    bake_Cookie(ingredients_List, baking_Instructions, oven_Temp, "star")
+
+
+def bake_Cookie(ingredients, instructions, temperature, cutter = "circle"):
     # print the list of ingredients
+    for item in ingredients:
+        print(item)
 
     # print the oven temperature setting
-    
+    print(f"Set oven temperature to: {temperature}")
 
     # print the instructions
-    print(instructions)
+    print(instructions, end="\n")
+    
+    #print which cookie cutter to use
+    print(f"Feel free to use a {cutter} cookie cutter before baking", end="\n \n")
 
 if __name__ == "__main__":
     main()

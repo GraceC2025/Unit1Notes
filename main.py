@@ -40,6 +40,14 @@ def main():
     #call function with optional args
     bake_Cookie(ingredients_List, baking_Instructions, oven_Temp, "star")
 
+    # call second function
+    print(calculate_Numbers(2, 3))
+    print(calculate_Numbers(2, 3, "subtract"))
+    print(calculate_Numbers(2, 3, operation = "subtract"))
+
+    # demonstrate modifying values while iteratiing
+    numbers = [5, 5, 6, 5.5, 7, 42, 70, "hi"]
+    list_Iteration(numbers)
 
 def bake_Cookie(ingredients, instructions, temperature, cutter = "circle"):
     # print the list of ingredients
@@ -55,5 +63,24 @@ def bake_Cookie(ingredients, instructions, temperature, cutter = "circle"):
     #print which cookie cutter to use
     print(f"Feel free to use a {cutter} cookie cutter before baking", end="\n \n")
 
+def calculate_Numbers(x, y, operation="add"):
+    if operation == "add":
+        return x + y
+    elif operation == "subtract":
+        return x - y
+    
+def list_Iteration(list):
+    # create a new list as you loop
+    new_List = []
+    for item in list:
+        new_List.append(item * 2)
+    print(new_List)
+
+    # list comprehension
+    input_List = [item * 2 for item in list]
+    print(input_List)
+
 if __name__ == "__main__":
     main()
+
+

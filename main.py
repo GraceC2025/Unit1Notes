@@ -49,6 +49,44 @@ def main():
     numbers = [5, 5, 6, 5.5, 7, 42, 70, "hi"]
     list_Iteration(numbers)
 
+    # test different container types
+    list_Demo()
+    tuple_Demo()
+    set_Demo()
+    dict_Demo()
+
+def list_Demo():
+    print("LIST DEMO")
+    new_List = ["h", "e", "l", "l", "o"]
+
+    # add item to list
+    new_List.append("!")
+
+    print(new_List)
+    print(len(new_List))
+
+    # use index to access items
+    print(new_List[0])
+    print(new_List[4:6]) # (last number not inclusive)
+    print(new_List[4:]) # same as 4:6 (everything onwards)
+    print(new_List[-2:]) # accessing index counting backwards/neg
+
+    # remove an item
+    new_List.remove("l") # (refers to first l)
+
+    # insert an item
+    new_List.insert(1, "l")
+    print(new_List)
+
+def tuple_Demo():
+    print("TUPLE DEMO")
+
+def set_Demo():
+    print("SET DEMO")
+
+def dict_Demo():
+    print("DICT DEMO")
+
 def bake_Cookie(ingredients, instructions, temperature, cutter = "circle"):
     # print the list of ingredients
     for item in ingredients:

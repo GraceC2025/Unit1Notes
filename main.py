@@ -73,16 +73,48 @@ def list_Demo():
 
     # remove an item
     new_List.remove("l") # (refers to first l)
+    print(new_List)
 
     # insert an item
     new_List.insert(1, "l")
     print(new_List)
 
+    # check if a value exists
+    print("!" in new_List)
+
+    # sort list (reverse alphabetical order example)
+    new_List.sort(reverse=True)
+    print(new_List)
+
 def tuple_Demo():
     print("TUPLE DEMO")
 
+    # tuples are immutable (lowkey suck)
+    person = ("Courtney", 17, "Brooklyn")
+    name, age, hometown = person 
+    print(name)
+    print(age)
+    print(hometown)
+
 def set_Demo():
     print("SET DEMO")
+
+    new_Set = set()
+    new_Set = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+    # sets are mutable
+    new_Set.add(0) # will insert in order
+    new_Set.remove(4)
+    print(new_Set)
+    
+    new_Set.add(8) # will not add b/c wont repeat a value
+    print(new_Set)
+
+    # math operations between two sets
+    second_Set = {2, 4, 6, 8, 10}
+    print(new_Set.union(second_Set))
+    print(new_Set.intersection(second_Set))
+    print(new_Set.difference(second_Set))
 
 def dict_Demo():
     print("DICT DEMO")

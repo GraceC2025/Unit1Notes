@@ -118,6 +118,22 @@ def set_Demo():
 
 def dict_Demo():
     print("DICT DEMO")
+    # create a dictionary with values {key: value}
+    # dictionary inside of a dictionary
+    costumes = {
+        "M&M": {"popularity %": 0.40, "school appropriate": True, "items": ["suit", "white tights"]},
+        "Cat": {"popularity %": 0.95, "school appropriate": "Maybe", "items": ["ears"]},
+        "Jorge": {"school appropriate": False, "items": ["clown hammer"]}
+    }
+    print(costumes)
+    print(costumes.items())
+    print(costumes.keys())
+    print(costumes.values())
+
+    # how to access items
+    print(costumes["Jorge"])
+    print(costumes.get("Cat"))
+
 
 def bake_Cookie(ingredients, instructions, temperature, cutter = "circle"):
     # print the list of ingredients

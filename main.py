@@ -50,6 +50,7 @@ def main():
     list_Iteration(numbers)
 
     # test different container types
+    print()
     list_Demo()
     tuple_Demo()
     set_Demo()
@@ -84,7 +85,7 @@ def list_Demo():
 
     # sort list (reverse alphabetical order example)
     new_List.sort(reverse=True)
-    print(new_List)
+    print(new_List, end="\n \n")
 
 def tuple_Demo():
     print("TUPLE DEMO")
@@ -94,7 +95,7 @@ def tuple_Demo():
     name, age, hometown = person 
     print(name)
     print(age)
-    print(hometown)
+    print(hometown, end="\n \n")
 
 def set_Demo():
     print("SET DEMO")
@@ -114,7 +115,7 @@ def set_Demo():
     second_Set = {2, 4, 6, 8, 10}
     print(new_Set.union(second_Set))
     print(new_Set.intersection(second_Set))
-    print(new_Set.difference(second_Set))
+    print(new_Set.difference(second_Set), end="\n \n")
 
 def dict_Demo():
     print("DICT DEMO")
@@ -125,15 +126,24 @@ def dict_Demo():
         "Cat": {"popularity %": 0.95, "school appropriate": "Maybe", "items": ["ears"]},
         "Jorge": {"school appropriate": False, "items": ["clown hammer"]}
     }
-    print(costumes)
-    print(costumes.items())
-    print(costumes.keys())
-    print(costumes.values())
+    print(costumes, end="\n \n")
+    print(costumes.items(), end="\n \n")
+    print(costumes.keys(), end="\n \n")
+    print(costumes.values(), end="\n \n")
 
     # how to access items
     print(costumes["Jorge"])
     print(costumes.get("Cat"))
+    print("Mr. Titcomb" in costumes, end="\n \n") # gives false b/c doesn't exist
 
+    # how to add items
+    costumes["Mr. Titcomb"] = {"popularity %": 1.00, "school appropriate": True}
+
+    # iterate through dictionary
+    print("Iterate Through Dictionary:")
+    for costume in costumes:
+        print(costume)
+        print(costumes[costume])
 
 def bake_Cookie(ingredients, instructions, temperature, cutter = "circle"):
     # print the list of ingredients
